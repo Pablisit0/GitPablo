@@ -1,1 +1,47 @@
-<h1>Hello, pupsik!</h1>
+<html lang="en">
+
+<script lang="JavaScript">
+
+    function f() {
+        /*
+        let number1TextInput = document.getElementById("number1");
+        let paragraph = document.createElement("p");
+        paragraph.textContent = number1TextInput.value;
+        document.body.append(
+            paragraph
+        )
+        */
+
+        let paragraph78 = document.createElement("p");
+        let ind1 = document.getElementById("number1").value, ind2 = document.getElementById("number2").value;
+        let arr = [];
+        let cnt = 1;
+        for( let i = 1; i <= ind1; i++ ){
+            let iAdd = [];
+            for( let j = 1; j <= ind2; j++ ){
+                let x = cnt;
+                iAdd.push(x);
+                cnt++;
+            }
+            arr.push( iAdd );
+        }
+        for (const i in arr) {
+            paragraph78.innerHTML = paragraph78.innerHTML + arr[i].join(" ") + "<br>";
+        }
+        document.body.append(
+            paragraph78
+        )
+    }
+
+</script>
+
+<form>
+    <input id="number1" type="number">;
+    <input id="number2" type="number">;
+</form>
+
+<body>
+    <button id = "button" onclick="f()">This is a button</button>;
+</body>
+
+</html>
